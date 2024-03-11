@@ -1,0 +1,34 @@
+
+.App-header {
+  background-color: #282c34;
+  height: 100vh;
+  
+  
+  
+}
+
+.title{
+  color: white;
+  text-align: center;
+}
+
+.text{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100px;
+}
+
+.delete{
+  margin-left: 40px;
+  width: 70px;
+  height: 30px;
+  font-size: 13px;
+  color: black;
+  background-color: red;
+}
+
+.lists{
+  margin-top: 50px;
+}
