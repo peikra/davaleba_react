@@ -1,24 +1,22 @@
 
 .App-header {
   background-color: #282c34;
-  height: 100vh;
+  
   
   
   
 }
 
-.title{
-  color: white;
-  text-align: center;
+.App{
+  background-color: #282c34;
+  min-height: 100vh;
+
 }
 
-.text{
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  height: 100px;
+.page{
+ margin-left: 47%;
 }
+
 
 .delete{
   margin-left: 40px;
@@ -31,4 +29,16 @@
 
 .lists{
   margin-top: 50px;
+} 
+
+
+
+li{
+  width: 300px;
+  height: 100px;
+}
+
+.for_products{
+  width: 30%;
+  margin: 0 auto;
 }

@@ -1,24 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 const ToDoapp = ()=> {
-    const todolist = [
-        {
-            id : 1,
-            text : 'lorem1',
-            checked: false,
-        },
-        {
-            id : 2,
-            text : 'lorem2',
-            checked: true,
-        },
-        {
-            id : 3,
-            text : 'lorem3',
-            checked: false,
-        }
-    ]
+  
 
 const [list,setlist] = useState(JSON.parse(sessionStorage.getItem('list')) || [])
 const [value,setvalue] = useState('')
@@ -77,20 +61,16 @@ const handleClick = (e)=>{
     setlist(updatedList);
     sessionStorage.setItem('list', JSON.stringify(updatedList));
 
-    
-
-
-   
-    
-    
-  
-
-    
-   
 
 }
 
+const inputref = useRef()
 
+useEffect(()=>{
+    
+    inputref.current.focus()
+
+},[inputref])
 
     return (
         <div className="Todoapp">
@@ -98,7 +78,7 @@ const handleClick = (e)=>{
             <form onSubmit = {handleSubmit}>
                 <div className="text">
                     
-                    <input type='text' value={value} onChange = {(e)=> setvalue(e.target.value)}  />
+                    <input ref={inputref} type='text' value={value} onChange = {(e)=> setvalue(e.target.value)}  />
                     <button>Add to do items</button>
                 
                 <ul className="lists">

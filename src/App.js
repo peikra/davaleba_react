@@ -1,17 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
-import ToDoapp from './components/ToDoApp';
+import PublicRoutes from './components/Routes/PublicRoutes';
+import AuthRoutes from './components/Routes/AuthRoutes';
+
 
 function App() {
+
+const isauthorized = true
   return (
     <div className="App">
-      <header className="App-header">
-        <ToDoapp/>
-        
-
-
-        
-      </header>
+      
+      {
+        isauthorized ? <PublicRoutes/> : <AuthRoutes/>
+      }
+      
+      
+    
     </div>
   );
 }
